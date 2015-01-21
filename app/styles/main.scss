@@ -21,6 +21,7 @@ body {
     background-color:rgb(51,51,51);
     color:white;
     padding: 1em 2em;
+    font-family: Pacifico;
   }
 
 }
@@ -38,6 +39,7 @@ body {
   }
 
   li {
+    font-family:Open Sans Condensed;
     font-size: 32px;
     font-weight: 600;
     color:rgb(51,51,51);
@@ -47,12 +49,28 @@ body {
     text-align: center;
     padding: 16px 0;
   }
+
+  li:hover {
+    background-color: rgb(204,204,204);
+  }
 }
 
 
 .main-section {
   margin: 0 4em;
   text-align: center;
+
+  h1 {
+    font-family:Open Sans Condensed;
+    font-weight:700;
+  }
+
+  h2 {
+    ont-family:Open Sans Condensed;
+    font-weight:400;
+    font-style: italic;
+    color: rgb(83,83,83);
+  }
 
   .bar {
     margin: 0 auto;
@@ -62,6 +80,10 @@ body {
 
   img {
     width:100%;
+  }
+
+  p {
+    font-family: lato;
   }
 }
 
@@ -159,5 +181,6 @@ body {
   html, body {
     height:100%;
   }
+
 }
 

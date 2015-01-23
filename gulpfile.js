@@ -25,7 +25,7 @@ gulp.task('devStyles', function () {
 });
 
 gulp.task('distStyles', function () {
-  styles('Users/travisczerw/Projects/Trav84.github.io');
+  styles('/Users/travisczerw/Projects/Trav84.github.io');
 });
 
 gulp.task('jshint', function () {
@@ -46,7 +46,7 @@ gulp.task('html', ['devStyles'], function () {
     .pipe(assets.restore())
     .pipe($.useref())
     .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
-    .pipe(gulp.dest('Users/travisczerw/Projects/Trav84.github.io'));
+    .pipe(gulp.dest('/Users/travisczerw/Projects/Trav84.github.io'));
 });
 
 gulp.task('images', function () {
@@ -55,7 +55,7 @@ gulp.task('images', function () {
     //   progressive: true,
     //   interlaced: true
     // })))
-    .pipe(gulp.dest('Users/travisczerw/Projects/Trav84.github.io/images'));
+    .pipe(gulp.dest('/Users/travisczerw/Projects/Trav84.github.io/images'));
 });
 
 gulp.task('fonts', function () {
@@ -63,7 +63,7 @@ gulp.task('fonts', function () {
     .pipe($.filter('**/*.{eot,svg,ttf,woff}'))
     .pipe($.flatten())
     .pipe(gulp.dest('.tmp/fonts'))
-    .pipe(gulp.dest('Users/travisczerw/Projects/Trav84.github.io/fonts'));
+    .pipe(gulp.dest('/Users/travisczerw/Projects/Trav84.github.io/fonts'));
 });
 
 gulp.task('extras', function () {
@@ -73,10 +73,10 @@ gulp.task('extras', function () {
     'node_modules/apache-server-configs/dist/.htaccess'
   ], {
     dot: true
-  }).pipe(gulp.dest('Users/travisczerw/Projects/Trav84.github.io'));
+  }).pipe(gulp.dest('/Users/travisczerw/Projects/Trav84.github.io'));
 });
 
-gulp.task('clean', require('del').bind(null, ['.tmp', 'Users/travisczerw/Projects/Trav84.github.io']));
+gulp.task('clean', require('del').bind(null, ['.tmp', '/Users/travisczerw/Projects/Trav84.github.io']));
 
 gulp.task('serve',  ['devStyles'],function () {
   browserSync({
@@ -121,7 +121,7 @@ gulp.task('wiredep', function () {
 });
 
 gulp.task('build', ['jshint', 'html', 'images', 'fonts', 'extras', 'distStyles'], function () {
-  return gulp.src('Users/travisczerw/Projects/Trav84.github.io/**/*').pipe($.size({title: 'build', gzip: true}));
+  return gulp.src('/Users/travisczerw/Projects/Trav84.github.io/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
 gulp.task('default', ['clean'], function () {

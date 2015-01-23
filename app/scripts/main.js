@@ -143,8 +143,8 @@ $( document ).ready(function() {
 
 	$( ".arrow-container" ).click(function(event) {
 
-		$('.right-section').scrollTop(0);
-		$('body').scrollTop(0);
+		$('.right-section').animate({scrollTop:0},'slow');
+		$('body').animate({scrollTop:0},'slow');
 
 	});
 });

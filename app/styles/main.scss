@@ -193,6 +193,10 @@ body {
   background-color: rgb(204,204,204);
 }
 
+#top-menu-bar-2 {
+  display:none;
+}
+
 /* CSS for medium devices ≥768px */
 @media (min-width: 768px) {
 
@@ -202,6 +206,10 @@ body {
     width:60%;
     height:100%;
     overflow-y: scroll;
+
+    h1 {
+      margin-bottom:1em;
+    }
   }
 
   .right-section {
@@ -209,10 +217,41 @@ body {
     width:40%;
     overflow-y: scroll;
     height:100%
+
   }
 
   html, body {
     height:100%;
+  }
+
+  .last-work {
+    border-top: none;
+    h2 {
+      display:none;
+    }
+
+    .bar {
+      display:none;
+    }
+
+    li {
+      font-size: 1.6em;
+      font-weight: 100;
+      padding-top:2em;
+    }
+
+  }
+
+  #top-menu-bar-2 {
+    display: block;
+  }
+
+  .top-menu-bar {
+    display:none;
+
+    li {
+      border-bottom: none;
+    }
   }
 
 }
